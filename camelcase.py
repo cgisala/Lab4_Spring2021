@@ -14,6 +14,7 @@ def camel_case(sentence):
     upper_camel_cased = symbol_filter(upper_camel_cased) # removes symbols
     return upper_camel_cased[0:1].lower() + upper_camel_cased[1:]
 
+#Filters symbols from the sentence
 def symbol_filter(sentence):
     unfiltered = []
     filtered = ""

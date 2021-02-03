@@ -127,6 +127,13 @@ class TestStudentLists(TestCase):
         self.assertTrue(test_class.is_class_full(test_class))
 
     ## TODO write a test for your new is_class_full method for when is empty, and when it is not full. Use assertFalse.
-
+    def test_is_empty_is_not_full(self):
+        test_class = ClassList(5)
+        test_class2 = ClassList(2)
+        test_class.add_student('Student1')
+        test_class.add_student('Student2')
+        test_class.add_student('Student3')
+        self.assertFalse(test_class.is_class_full(test_class))
+        self.assertFalse(test_class.is_class_full(test_class2))
 if __name__ == '__main__':
     unittest.main()
